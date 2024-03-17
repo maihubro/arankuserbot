@@ -7,6 +7,7 @@ class Development(Config):
     API_HASH = "680a4153538eb9f9a2195cbcb464114f"
     # the name to display in your alive message
     ALIVE_NAME = "Arank"
+    ALIVE_PIC = "https://te.legra.ph/file/a1a30607889f3e983c830.jpg"
     # create any PostgreSQL database (i recommend to use elephantsql) and paste that link here
     DB_URI = "postgres://zzbexnvo:ZvxGk16w9KAryc-upU2hSDQW7nLbmBWl@cornelius.db.elephantsql.com/zzbexnvo"
     # After cloning the repo and installing requirements do python3 stringsetup.py an fill that value with this
