@@ -6,8 +6,7 @@
 
 # Please see: https://github.com/CoderXKrishna/arankuserbot/blob/master/LICENSE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-
-FROM arankub/core:bullseye
+FROM mygoddd/mygspot:bullseye
 
 # Working directory 
 WORKDIR /userbot
@@ -20,4 +19,5 @@ COPY . .
 
 ENV PATH="/home/userbot/bin:$PATH"
 
-CMD ["python3","-m","userbot"]
+RUN pip install gunicorn flask
+CMD bash start.sh
