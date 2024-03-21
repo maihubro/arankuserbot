@@ -24,7 +24,7 @@ A simple Telegram userbot based on Telethon .
 
 ### Koyeb Deploy
 
-- [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&builder=dockerfile&repository=github.com/maihubro/arankuserbot&branch=main&name=arankuserbot&service_type=web&env[ALIVE_NAME]=)
+- [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&builder=dockerfile&repository=github.com/maihubro/arankuserbot&branch=main&name=arankuserbot&service_type=web&env[ALIVE_NAME]=&env[APP_ID]=)
 
 ### Self host
 
