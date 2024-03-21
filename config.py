@@ -18,7 +18,7 @@ class Development(Config):
         "TG_BOT_TOKEN_BF_HER", None
     )
     # create a private group and a rose bot to it and type /id and paste that id here (replace that -100 with that group id)
-    PRIVATE_GROUP_BOT_API_ID = -1002101729420
+    PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID", None))
     # command handler
     COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", r".")
     # command hanler for sudo
