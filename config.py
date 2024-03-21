@@ -4,7 +4,7 @@ import os
 
 class Development(Config):
     # get this values from the my.telegram.org
-    APP_ID = int(os.environ.get("APP_ID", 6))
+    APP_ID = int(os.environ.get("APP_ID", None))
     API_HASH = os.environ.get("API_HASH") or None
     # the name to display in your alive message
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
