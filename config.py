@@ -1,7 +1,6 @@
 from sample_config import Config
 import os
 
-
 class Development(Config):
     # get this values from the my.telegram.org
     APP_ID = int(os.environ.get("APP_ID", None))
@@ -22,6 +21,6 @@ class Development(Config):
     # command handler
     COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", r".")
     # command hanler for sudo
-    SUDO_COMMAND_HAND_LER = os.environ.get("SUDO_COMMAND_HAND_LER", r"."
+    SUDO_COMMAND_HAND_LER = os.environ.get("SUDO_COMMAND_HAND_LER", r".")
     # External plugins repo
     EXTERNAL_REPO = "https://github.com/CoderXKrishna/arankPlugins"
