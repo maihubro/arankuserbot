@@ -22,6 +22,10 @@ A simple Telegram userbot based on Telethon .
 
 - [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://github.com/CoderXKrishna/nekopack)
 
+### Koyeb Deploy
+
+- [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?https://github.com/maihubro/arankuserbot)
+
 ### Self host
 
 - [**Check Docs**](https://CoderXKrishna.gitbook.io/arankuserbot/installation/hosting)
