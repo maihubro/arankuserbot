@@ -8,6 +8,7 @@ class Development(Config):
     # the name to display in your alive message
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
     ALIVE_PIC = os.environ.get("ALIVE_PIC") or None
+    PM_TEXT =  os.environ.get("PM_TEXT") or None
     # create any PostgreSQL database (i recommend to use elephantsql) and paste that link here
     DB_URI = os.environ.get("DATABASE_URL", None)
     # After cloning the repo and installing requirements do python3 stringsetup.py an fill that value with this
