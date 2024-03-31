@@ -140,13 +140,13 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
     elif gvarstatus("pmmenu") is None:
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me. 
 
-You have {warns}/{totalwarns} warns until you get blocked by the arankUserbot.
+You have {PM_WARNS[str(chat.id)]}/{totalwarns} warns until you get blocked by the arankUserbot.
 
 Choose an option from below to specify the reason of your message and wait for me to check it. __⬇️"""
     else:
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me.
 
-You have {warns}/{totalwarns} warns until you get blocked by the arankUserbot.
+You have {PM_WARNS[str(chat.id)]}/{totalwarns} warns until you get blocked by the arankUserbot.
 
 Don't spam my inbox. say reason and wait until my response.__"""
     addgvar("PM_TEXT", USER_BOT_NO_WARN)
@@ -186,8 +186,8 @@ Don't spam my inbox. say reason and wait until my response.__"""
     except Exception as e:
         LOGS.info(str(e))
     PMMESSAGE_CACHE[str(chat.id)] = msg.id
-    #sql.del_collection("pmwarns")
-    #sql.del_collection("pmmessagecache")
+    sql.del_collection("pmwarns")
+    sql.del_collection("pmmessagecache")
     sql.add_collection("pmwarns", PM_WARNS, {})
     sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
 
