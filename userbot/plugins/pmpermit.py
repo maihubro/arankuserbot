@@ -71,7 +71,10 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
         MAX_FLOOD_IN_PMS = 6
     totalwarns = MAX_FLOOD_IN_PMS + 1
     warns = PM_WARNS[str(chat.id)] + 1
-    print(warns)
+    LOGS.info(str(warns))
+    hhhh = PM_WARNS[str(chat.id)]
+    LOGS.info(str(hhhh))
+    LOGS.info(str(MAX_FLOOD_IN_PMS))
     remwarns = totalwarns - warns
     if PM_WARNS[str(chat.id)] >= MAX_FLOOD_IN_PMS:
         try:
@@ -140,13 +143,13 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
     elif gvarstatus("pmmenu") is None:
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me. 
 
-You have {PM_WARNS[str(chat.id)]}/{totalwarns} warns until you get blocked by the arankUserbot.
+You have {warns}/{totalwarns} warns until you get blocked by the arankUserbot.
 
 Choose an option from below to specify the reason of your message and wait for me to check it. __⬇️"""
     else:
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me.
 
-You have {PM_WARNS[str(chat.id)]}/{totalwarns} warns until you get blocked by the arankUserbot.
+You have {warns}/{totalwarns} warns until you get blocked by the arankUserbot.
 
 Don't spam my inbox. say reason and wait until my response.__"""
     addgvar("PM_TEXT", USER_BOT_NO_WARN)
