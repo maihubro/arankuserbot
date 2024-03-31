@@ -138,13 +138,11 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
             remwarns=remwarns,
         )
     elif gvarstatus("pmmenu") is None:
-        LOGS.info(str(warns))
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me. 
 
 You have {warns}/{totalwarns} warns until you get blocked by the arankUserbot.
 
 Choose an option from below to specify the reason of your message and wait for me to check it. __⬇️"""
-        LOGS.info(warns)
     else:
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me.
 
