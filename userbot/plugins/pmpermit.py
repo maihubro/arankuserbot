@@ -71,6 +71,7 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
         MAX_FLOOD_IN_PMS = 6
     totalwarns = MAX_FLOOD_IN_PMS + 1
     warns = PM_WARNS[str(chat.id)] + 1
+    print(warns)
     remwarns = totalwarns - warns
     if PM_WARNS[str(chat.id)] >= MAX_FLOOD_IN_PMS:
         try:
@@ -107,8 +108,8 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
                             \n[{get_display_name(chat)}](tg://user?id={chat.id}) is blocked\
                             \n**Message Count:** {PM_WARNS[str(chat.id)]}"
         del PM_WARNS[str(chat.id)]
-        #sql.del_collection("pmwarns")
-        #sql.del_collection("pmmessagecache")
+        sql.del_collection("pmwarns")
+        sql.del_collection("pmmessagecache")
         sql.add_collection("pmwarns", PM_WARNS, {})
         sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
         try:
@@ -185,8 +186,8 @@ Don't spam my inbox. say reason and wait until my response.__"""
     except Exception as e:
         LOGS.info(str(e))
     PMMESSAGE_CACHE[str(chat.id)] = msg.id
-    sql.del_collection("pmwarns")
-    sql.del_collection("pmmessagecache")
+    #sql.del_collection("pmwarns")
+    #sql.del_collection("pmmessagecache")
     sql.add_collection("pmwarns", PM_WARNS, {})
     sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
 
