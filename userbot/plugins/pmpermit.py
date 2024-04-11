@@ -119,9 +119,24 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
             )
         except BaseException:
             return
-    custompmpermit = gvarstatus("PM_TEXT") or None
+    custompmpermit = "Hii {mention} hgvgggggg"
     if custompmpermit is not None:
-        USER_BOT_NO_WARN = custompmpermit 
+        USER_BOT_NO_WARN = custompmpermit.format(
+            mention=mention,
+            first=first,
+            last=last,
+            fullname=fullname,
+            username=username,
+            userid=userid,
+            my_first=my_first,
+            my_last=my_last,
+            my_fullname=my_fullname,
+            my_username=my_username,
+            my_mention=my_mention,
+            totalwarns=totalwarns,
+            warns=warns,
+            remwarns=remwarns,
+        )
     elif gvarstatus("pmmenu") is None:
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me. 
 
